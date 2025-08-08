@@ -7,8 +7,7 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf);
-
+requestAnimationFrame(raf)
 
 
 
@@ -94,3 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function loadingAnimation(){
+    var tl = gsap.timeline()
+    tl.from("#main", {
+        opacity: 0
+    })
+    tl.from('#main', {
+        transform: "scaleX(0.7) scaleY(0.2)",
+        borderRadius: "100px",
+        duration: 1,
+        ease: "expo-out"
+    })
+    tl.from("#main nav", {
+        opacity: 0
+    })
+    tl.from("#main img, #main button", {
+        opacity: 0, 
+        stagger: 0.2,
+        duration: 1
+    })
+}
+loadingAnimation();
