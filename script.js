@@ -107,9 +107,9 @@ function loadingAnimation(){
     tl.from("#main nav", {
         opacity: 0
     })
-    tl.from("#main img, #main button", {
+    tl.from("#main img, #main button, #main a, #main p", {
         opacity: 0, 
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 1
     })
 }
